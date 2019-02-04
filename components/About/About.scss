@@ -1,0 +1,12 @@
+.About {
+  &_Container {
+    width: 100%;
+    height: 100vh;
+    background-image:
+      linear-gradient(
+        to bottom right,
+        #0c0f12,
+        #23669c
+      );
+  }
+}
