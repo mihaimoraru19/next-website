@@ -3,8 +3,16 @@ import Fullpage, { FullPageSections, FullpageSection } from '@ap.cx/react-fullpa
 import '../styles/style.scss'
 import Intro from '../components/Intro/Intro'
 import About from '../components/About/About'
+import Resume from '../components/Resume/Resume'
+import Mercury from '@postlight/mercury-parser'
 
 export default class Home extends Component {
+  componentDidMount () {
+    // const url = 'https://www.google.com'
+    const url = 'https://www.emag.ro/telefon-mobil-samsung-galaxy-s8-64gb-4g-midnight-black-sm-g950fzkarom/pd/D1XVG7BBM/';
+    Mercury.parse(url).then(result => console.log(result))
+  }
+
   render () {
     return (
       <Fullpage>
@@ -17,15 +25,11 @@ export default class Home extends Component {
           }}>
             <Intro />
           </FullpageSection>
-          <FullpageSection id='Second' style={{
-          }}>
+          <FullpageSection>
             <About />
           </FullpageSection>
-          <FullpageSection style={{
-            backgroundColor: 'firebrick'
-            // padding: '1em',
-          }}>
-                        3
+          <FullpageSection>
+            <Resume />
           </FullpageSection>
           <FullpageSection style={{
             backgroundColor: 'grey'

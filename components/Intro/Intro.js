@@ -98,7 +98,7 @@ export default class Intro extends Component {
             <div className='Intro_Text_Job'>
               <Typist cursor={{ blink: true }}>
                 <span>Full-Stack Web Devloper</span>
-                <Typist.Backspace count={5} delay={1000} />
+                <Typist.Backspace count={5} delay={800} />
                 <span>eloper</span>
               </Typist>
             </div>
