@@ -15,7 +15,7 @@ export default class Intro extends Component {
           params={{
             particles: {
               number: {
-                value: 200,
+                value: 100,
                 density: {
                   enable: true,
                   value_area: 1000
@@ -116,7 +116,7 @@ export default class Intro extends Component {
               </a>
             </div>
           </div>
-          <div className='Intro_Footer'>
+          <div onClick={() => window.scrollBy({top: window.innerHeight, behavior: 'smooth'})} className='Intro_Footer'>
             <IoIosArrowDown size={'1.5em'} color={'rgb(66, 135, 191)'} />
           </div>
         </div>

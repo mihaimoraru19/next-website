@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react'
 import './About.scss'
-import { IoIosArrowDown } from 'react-icons/io'
 
 export default class About extends PureComponent {
   render () {
@@ -22,9 +21,6 @@ export default class About extends PureComponent {
               Since October 1st 2018, I am a student at Babes-Bolyai University from Cluj-Napoca studying for a bachelor's degree in Computer Science.
               I believe that every software created should be the response to a need or a problem that we have.
           </div>
-        </div>
-        <div className='Arrow'>
-          <IoIosArrowDown size={'1.5em'} color={'rgb(66, 135, 191)'} />
         </div>
       </div>
     )

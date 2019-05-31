@@ -1,7 +1,6 @@
 .Intro {
   &_Container {
     height: 100%;
-    width: 100%;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -58,6 +57,7 @@
     bottom: -30vh;
     transform: translateY(0px);
     animation: bounce 2s ease-in-out infinite;
+    cursor: pointer;
   }
 }
 

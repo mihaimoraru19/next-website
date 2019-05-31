@@ -10,7 +10,7 @@ export default class Resume extends PureComponent {
         </h1>
         <div className='Resume_Company'>
           <div>
-            <h2 className='Resume_Company_Name'>Gentlab</h2>
+            <div className='Resume_Company_Name' style={{color: '#439fdb'}}>GENTLAB</div>
             <span className='Resume_Company_Position'>
               Full-Stack Developer
             </span>
@@ -27,7 +27,7 @@ export default class Resume extends PureComponent {
         </div>
         <div className='Resume_Company'>
           <div>
-            <h2 className='Resume_Company_Name'>AROBS Transilvania Software</h2>
+            <div className='Resume_Company_Name' style={{color: '#6dbf5c'}}>AROBS Transilvania Software</div>
             <span className='Resume_Company_Position'>
               JavaScript Developer
             </span>
