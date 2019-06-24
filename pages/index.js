@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import '../styles/style.scss'
-import Intro from '../components/Intro/Intro'
-import About from '../components/About/About'
-import Resume from '../components/Resume/Resume'
+import Intro from '../containers/Intro/Intro'
+import About from '../containers/About/About'
+import Resume from '../containers/Resume/Resume'
 import LazyLoad from 'react-lazyload'
-import Contact from "../components/Contact/Contact";
+import Contact from "../containers/Contact/Contact";
+import Technologies from '../containers/Technologies/Technologies';
 
 export default class Home extends Component {
 
@@ -24,6 +25,7 @@ export default class Home extends Component {
         <div id="#Content" className="Content">
           <About />
           <Resume />
+          {/*<Technologies />*/}
           <Contact />
         </div>
       </div>

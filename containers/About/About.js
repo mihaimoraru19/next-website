@@ -9,9 +9,9 @@ export default class About extends PureComponent {
           <div className='About_First_Left'>
             <img className='About_Image' src='../../static/mihai-cut.png' alt='Mihai Moraru Photo' />
             <div className='About_Details'>
-              <div>Age: 19</div>
+              {/*<div>Age: 19</div>*/}
               <div>Location: Cluj-Napoca, Romania</div>
-              <div>Experience: 2 years</div>
+              <div>Experience: 2+ years</div>
             </div>
           </div>
           <div className='About_First_Right'>

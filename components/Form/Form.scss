@@ -1,0 +1,80 @@
+.Form {
+  &_Container {
+    display: block;
+    text-align: left;
+    padding: 10px;
+    background-color: rgba(66, 66, 66, 0.5);
+    font-family: "Titillium Web", sans-serif;
+    font-size: 20px;
+    border-radius: 0;
+    width: 40%;
+    border: 1px solid #0077b5;
+  }
+  &_Field{
+    margin-top: 5px;
+  }
+  &_Input {
+    display: block;
+    background-color: transparent;
+    border-radius: 0;
+    color: white;
+    max-height: 35px;
+    width: 95%;
+    font-size: 18px;
+    padding: 5px;
+    border: 0;
+    font-family: "Titillium Web", sans-serif;
+    border-bottom: 1px solid rgb(169, 169, 169);
+  }
+  &_Input:focus {
+    outline: 0;
+    border-bottom: 1px solid #0077b5;
+  }
+  &_TextareaInput {
+    display: flex;
+    background-color: transparent;
+    color: white;
+    font-family: "Titillium Web", sans-serif;
+    -webkit-appearance: none;
+    padding: 5px;
+    font-size: 18px;
+    width: 95%;
+    min-height: 250px;
+    border: 1px solid rgb(169, 169, 169);
+  }
+  &TextareaInput:focus {
+    outline: 0;
+    border: 1px solid #0077b5;
+  }
+  &_Button {
+    color: white;
+    display: flex;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Titillium Web', sans-serif;
+    padding: 5px 25px;
+    background-color: #295e78;
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  &_Button:hover {
+    color: #3477b5;
+    background-color: white;
+  }
+}
+
+label {
+  display: block;
+  color: #c8c8c8;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 1024px) {
+  .Form_Container {
+    width: 70%;
+  }
+}

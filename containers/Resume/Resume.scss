@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    height: 100vh;
+    //height: 100vh;
     color: white;
   }
   &_Header {
@@ -40,7 +40,8 @@
       color: lightgrey;
     }
     &_Description {
-
+      margin-top: 2%;
+      text-align: justify;
     }
   }
 }

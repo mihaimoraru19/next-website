@@ -128,25 +128,32 @@
 }
 
 .Typist .Cursor {
-  display: inline-block; }
+  display: inline-block;
+}
 .Typist .Cursor--blinking {
   opacity: 1;
-  animation: blink 1s linear infinite; }
+  animation: blink 1s linear infinite;
+}
 
 @keyframes blink {
   0% {
-    opacity: 1; }
+    opacity: 1;
+  }
   50% {
-    opacity: 0; }
+    opacity: 0;
+  }
   100% {
-    opacity: 1; } }
+    opacity: 1;
+  }
+}
 
 .TypistExample a {
   color: inherit; }
 .TypistExample a:hover {
   background-color: #22BAD9;
   color: white;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 .TypistExample-header {
   margin-top: 5%;
@@ -154,12 +161,14 @@
   text-align: center;
   font-size: 3em;
   cursor: pointer;
-  color: #22BAD9; }
+  color: #22BAD9;
+}
 
 .TypistExample-message {
   color: hotpink;
   width: 400px;
-  margin: auto; }
+  margin: auto;
+}
 .TypistExample-message .flash {
   color: #22BAD9;
   font-weight: bold;
@@ -167,12 +176,17 @@
   animation-name: blinker;
   animation-duration: 0.7s;
   animation-timing-function: linear;
-  animation-iteration-count: infinite; }
+  animation-iteration-count: infinite;
+}
 
 @keyframes blinker {
   0% {
-    opacity: 1.0; }
+    opacity: 1.0;
+  }
   50% {
-    opacity: 0.0; }
+    opacity: 0.0;
+  }
   100% {
-    opacity: 1.0; } }
+    opacity: 1.0;
+  }
+}
