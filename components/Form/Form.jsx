@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+import { IoIosCheckmarkCircleOutline } from 'react-icons/io';
 import './Form.scss';
 
 export default class Form extends Component {
@@ -17,7 +19,8 @@ export default class Form extends Component {
         email: false,
         subject: false,
         message: false
-      }
+      },
+      disabled: false
     }
   }
 
@@ -58,8 +61,23 @@ export default class Form extends Component {
   };
 
   onSubmit = (e) => {
+    const { form: { name, email, subject, message } } = this.state;
     e.preventDefault();
-    if (this.validate()) console.log('JAP MAIL');
+
+    if (this.validate()) {
+      axios(({
+        method: 'post',
+        url: 'https://mihaimoraru.com/submit',
+        data: {
+          name: name,
+          subject: subject,
+          email: email,
+          message: message
+        }
+      }));
+
+      this.setState({disabled: true})
+    }
 
   };
 
@@ -71,7 +89,7 @@ export default class Form extends Component {
   };
 
   render () {
-    const { errors: {name, email, subject, message} } = this.state;
+    const { errors: { name, email, subject, message }, disabled } = this.state;
     return (
       <form autoComplete="on" className="Form_Container">
         <div className="Form_Field">
@@ -83,6 +101,7 @@ export default class Form extends Component {
             className="Form_Input"
             onChange={(e) => this.onChange(e)}
             style={name ? {borderBottom: '1px solid red'} : {}}
+            disabled={disabled}
           />
         </div>
         <div className="Form_Field">
@@ -94,6 +113,7 @@ export default class Form extends Component {
             className="Form_Input"
             onChange={(e) => this.onChange(e)}
             style={email ? {borderBottom: '1px solid red'} : {}}
+            disabled={disabled}
           />
         </div>
         <div className="Form_Field">
@@ -105,6 +125,7 @@ export default class Form extends Component {
             className="Form_Input"
             onChange={(e) => this.onChange(e)}
             style={subject ? {borderBottom: '1px solid red'} : {}}
+            disabled={disabled}
           />
         </div>
         <div className="Form_Field">
@@ -115,12 +136,19 @@ export default class Form extends Component {
             className="Form_TextareaInput"
             onChange={(e) => this.onChange(e)}
             style={message ? {border: '1px solid red'} : {}}
+            disabled={disabled}
           />
         </div>
-
-        <button className="Form_Button" onClick={(e) => this.onSubmit(e)}>
-          SUBMIT
-        </button>
+        {disabled ? (
+          <button className="Form_Button_Success" onClick={(e) => this.onSubmit(e)} disabled={true}>
+            Your message has been sent!
+            <IoIosCheckmarkCircleOutline style={{marginLeft: '5px'}}/>
+          </button>
+        ) : (
+          <button className="Form_Button" onClick={(e) => this.onSubmit(e)} disabled={false}>
+            SUBMIT
+          </button>
+        )}
 
       </form>
     )

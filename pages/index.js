@@ -5,9 +5,17 @@ import About from '../containers/About/About'
 import Resume from '../containers/Resume/Resume'
 import LazyLoad from 'react-lazyload'
 import Contact from "../containers/Contact/Contact";
-import Technologies from '../containers/Technologies/Technologies';
+import { initGA, logPageView } from "../utils/analytics";
 
 export default class Home extends Component {
+
+  componentDidMount() {
+    if (!window.GA_INITIALIZED) {
+      initGA();
+      window.GA_INITIALIZED = true;
+    }
+    logPageView();
+  }
 
   render () {
     return (
@@ -25,7 +33,6 @@ export default class Home extends Component {
         <div id="#Content" className="Content">
           <About />
           <Resume />
-          {/*<Technologies />*/}
           <Contact />
         </div>
       </div>

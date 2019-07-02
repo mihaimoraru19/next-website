@@ -5,7 +5,10 @@ export default class MyDocument extends Document {
   render () {
     return (
       <html>
-        <Head>
+        <Head
+          title='Mihai Moraru - Full-Stack Developer'
+          url='https://mihaimoraru.com'
+        >
           <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' />
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
           <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:700' rel='stylesheet' />
