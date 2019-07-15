@@ -1,0 +1,49 @@
+.Contact {
+  &_Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    //min-height: 100vh;
+    color: white;
+  }
+  &_Header {
+    position: relative;
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: left;
+    font-size: 3rem;
+    text-shadow: 1px 2px black;
+    margin-top: 20%;
+    top: -120px;
+    align-self: flex-start;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .Contact_Header {
+    top: -50px;
+    text-align: center;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 10%;
+  }
+  .Contact_Container {
+    min-height: 100vh;
+  }
+}
+
+.Footer {
+  display: flex;
+  justify-content: center;
+  background-color: #194761;
+  align-items: center;
+  color: white;
+  font-family: 'Titillium Web', sans-serif;
+  width: 100%;
+  margin-top: 2.5%;
+  height: 4vh;
+}

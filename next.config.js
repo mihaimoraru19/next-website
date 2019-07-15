@@ -1,2 +1,10 @@
 const withSass = require('@zeit/next-sass');
-module.exports = withSass();
+const nextImages = require('next-images');
+const compose = require('next-compose');
+
+module.exports = compose([
+  [withSass, {
+    cssModules: false
+  }],
+  [nextImages],
+]), {crossOrigin: 'anonymous'};
